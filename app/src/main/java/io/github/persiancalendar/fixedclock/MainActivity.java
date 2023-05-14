@@ -13,5 +13,7 @@ public class MainActivity extends Activity {
         TextClock clock = findViewById(R.id.clock);
         clock.setBackgroundColor(Color.BLACK);
         clock.setTimeZone("GMT+03:30");
+        clock.setFormat12Hour("h:mm");
+        clock.setFormat24Hour("h:mm");
     }
 }

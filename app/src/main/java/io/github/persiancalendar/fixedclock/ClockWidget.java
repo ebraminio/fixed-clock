@@ -12,6 +12,8 @@ public class ClockWidget extends AppWidgetProvider {
             RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.main);
             appWidgetManager.updateAppWidget(appWidgetId, views);
             views.setString(R.id.clock, "setTimeZone", "GMT+03:30");
+            views.setCharSequence(R.id.clock, "setFormat12Hour", "h:mm");
+            views.setCharSequence(R.id.clock, "setFormat24Hour", "h:mm");
             appWidgetManager.updateAppWidget(appWidgetId, views);
         }
     }
