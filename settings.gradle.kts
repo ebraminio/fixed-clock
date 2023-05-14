@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "FixedClock"
-include ':app'
+include(":app")
