@@ -5,6 +5,7 @@ plugins {
 android {
     namespace = "io.github.persiancalendar.fixedclock"
     compileSdk = 33
+    buildToolsVersion = "33.0.2"
 
     defaultConfig {
         applicationId = "io.github.persiancalendar.fixedclock"
@@ -44,7 +45,4 @@ android {
             signingConfig = signingConfigs.getByName("release")
         }
     }
-}
-
-dependencies {
 }
