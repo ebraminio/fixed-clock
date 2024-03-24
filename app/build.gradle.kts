@@ -4,13 +4,13 @@ plugins {
 
 android {
     namespace = "io.github.persiancalendar.fixedclock"
-    compileSdk = 33
+    compileSdk = 34
     buildToolsVersion = "33.0.2"
 
     defaultConfig {
         applicationId = "io.github.persiancalendar.fixedclock"
-        minSdk = 26
-        targetSdk = 33
+        minSdk = 1
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
     }

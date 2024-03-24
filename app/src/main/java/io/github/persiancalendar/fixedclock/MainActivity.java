@@ -10,7 +10,7 @@ import android.widget.TextClock;
 
 public class MainActivity extends Activity {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         final var window = getWindow();
@@ -20,14 +20,18 @@ public class MainActivity extends Activity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             window.setNavigationBarContrastEnforced(false);
         }
-        window.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WALLPAPER |
-                WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setNavigationBarColor(Color.TRANSPARENT);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WALLPAPER |
+                    WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setNavigationBarColor(Color.TRANSPARENT);
         window.setStatusBarColor(Color.TRANSPARENT);
+        }
         window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        TextClock clock = findViewById(R.id.clock);
-        clock.setTimeZone("GMT+03:30");
-        clock.setFormat12Hour("h:mm");
-        clock.setFormat24Hour("h:mm");
+        final TextClock clock = findViewById(R.id.clock);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            clock.setTimeZone("GMT+03:30");
+            clock.setFormat12Hour("h:mm");
+            clock.setFormat24Hour("h:mm");
+        }
     }
 }
