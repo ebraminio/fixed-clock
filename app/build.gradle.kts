@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "io.github.persiancalendar.fixedclock"
-        minSdk = 1
+        minSdk = 17
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"

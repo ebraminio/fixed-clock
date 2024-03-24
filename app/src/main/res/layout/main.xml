@@ -9,6 +9,5 @@
     android:gravity="center"
     android:maxLines="1"
     android:textAlignment="center"
-    android:textColor="@android:color/white"
     android:textSize="20sp"
     tools:context=".MainActivity" />

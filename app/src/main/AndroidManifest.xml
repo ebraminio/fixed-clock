@@ -4,6 +4,7 @@
 
     <application
         android:allowBackup="true"
+        android:name=".MainApplication"
         android:icon="@drawable/ic_launcher"
         android:label="Fixed Clock"
         android:roundIcon="@drawable/ic_launcher"

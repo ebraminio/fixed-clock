@@ -6,6 +6,7 @@ import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.widget.RemoteViews;
 
@@ -22,6 +23,7 @@ public class ClockWidget extends AppWidgetProvider {
             final var views = new RemoteViews(context.getPackageName(), R.layout.main);
             views.setOnClickPendingIntent(R.id.clock, pendingIntent);
             appWidgetManager.updateAppWidget(appWidgetId, views);
+            views.setInt(R.id.clock, "setTextColor", Color.WHITE);
             views.setString(R.id.clock, "setTimeZone", "GMT+03:30");
             views.setCharSequence(R.id.clock, "setFormat12Hour", "h:mm");
             views.setCharSequence(R.id.clock, "setFormat24Hour", "h:mm");
