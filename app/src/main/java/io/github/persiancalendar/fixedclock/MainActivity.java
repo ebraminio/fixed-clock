@@ -28,10 +28,8 @@ public class MainActivity extends Activity {
         }
         window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         final TextClock clock = findViewById(R.id.clock);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-            clock.setTimeZone("GMT+03:30");
-            clock.setFormat12Hour("h:mm");
-            clock.setFormat24Hour("h:mm");
-        }
+        clock.setTimeZone("GMT+03:30");
+        clock.setFormat12Hour("h:mm");
+        clock.setFormat24Hour("h:mm");
     }
 }
