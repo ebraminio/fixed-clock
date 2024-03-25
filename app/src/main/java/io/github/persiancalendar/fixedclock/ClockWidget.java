@@ -1,16 +1,13 @@
 package io.github.persiancalendar.fixedclock;
 
-import android.annotation.TargetApi;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Build;
 import android.widget.RemoteViews;
 
-@TargetApi(Build.VERSION_CODES.CUPCAKE)
 public class ClockWidget extends AppWidgetProvider {
     @Override
     public void onUpdate(final Context context, final AppWidgetManager appWidgetManager, final int[] appWidgetIds) {
