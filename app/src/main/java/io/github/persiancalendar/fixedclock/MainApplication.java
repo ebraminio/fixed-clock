@@ -23,7 +23,7 @@ public class MainApplication extends Application {
             channel.setSound(null, null);
             channel.setVibrationPattern(null);
             notificationManager.createNotificationChannel(channel);
-            final var views = new RemoteViews(getPackageName(), R.layout.main);
+            final var views = new RemoteViews(getPackageName(), R.layout.notification);
             views.setString(R.id.clock, "setTimeZone", "GMT+03:30");
             views.setCharSequence(R.id.clock, "setFormat12Hour", "h:mm");
             views.setCharSequence(R.id.clock, "setFormat24Hour", "h:mm");
