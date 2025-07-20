@@ -8,6 +8,7 @@
     android:autoSizeTextType="uniform"
     android:gravity="center"
     android:maxLines="1"
+    android:paddingHorizontal="16dp"
     android:textAlignment="center"
     android:textSize="20sp"
     tools:context=".MainActivity" />

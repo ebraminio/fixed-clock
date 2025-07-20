@@ -29,7 +29,7 @@ public class MainActivity extends Activity {
         window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         final TextClock clock = findViewById(R.id.clock);
         clock.setTimeZone("GMT+03:30");
-        clock.setFormat12Hour("h:mm:ss");
-        clock.setFormat24Hour("h:mm:ss");
+        clock.setFormat12Hour("hh:mm:ss");
+        clock.setFormat24Hour("hh:mm:ss");
     }
 }
