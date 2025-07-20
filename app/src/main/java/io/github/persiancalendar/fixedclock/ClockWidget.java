@@ -22,8 +22,8 @@ public class ClockWidget extends AppWidgetProvider {
             appWidgetManager.updateAppWidget(appWidgetId, views);
             views.setInt(R.id.clock, "setTextColor", Color.WHITE);
             views.setString(R.id.clock, "setTimeZone", "GMT+03:30");
-            views.setCharSequence(R.id.clock, "setFormat12Hour", "h:mm");
-            views.setCharSequence(R.id.clock, "setFormat24Hour", "h:mm");
+            views.setCharSequence(R.id.clock, "setFormat12Hour", "h:mm:ss");
+            views.setCharSequence(R.id.clock, "setFormat24Hour", "h:mm:ss");
             appWidgetManager.updateAppWidget(appWidgetId, views);
         }
     }
